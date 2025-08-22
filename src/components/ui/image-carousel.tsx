@@ -28,18 +28,18 @@ export const ImageCarousel = () => {
         carouselInView ? 'animate-fade-in' : 'opacity-0 translate-y-4'
       }`}
     >
-      <Carousel className="w-full max-w-7xl mx-auto" opts={{ align: "start", loop: true }}>
+      <Carousel className="w-full max-w-full mx-auto" opts={{ align: "center", loop: true }}>
         <CarouselContent className="-ml-2 md:-ml-4">
           {carouselImages.map((image, index) => (
-            <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
+            <CarouselItem key={index} className="pl-2 md:pl-4 basis-auto">
               <div className="group cursor-pointer">
                 <div className="bg-card rounded-xl overflow-hidden shadow-card border border-border hover:shadow-glow hover:border-gold/30 transition-all duration-300 hover:scale-105">
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-48 md:h-56 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="h-80 md:h-96 lg:h-[500px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="p-3 bg-gradient-to-t from-background/90 to-transparent">
+                  <div className="p-3 bg-gradient-to-t from-background/90 to-transparent absolute bottom-0 left-0 right-0">
                     <p className="text-xs text-muted-foreground text-center line-clamp-2">
                       {image.alt}
                     </p>
