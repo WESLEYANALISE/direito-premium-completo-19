@@ -28,24 +28,29 @@ export const ImageCarousel = () => {
         carouselInView ? 'animate-fade-in' : 'opacity-0 translate-y-4'
       }`}
     >
-      <Carousel className="w-full max-w-6xl mx-auto">
-        <CarouselContent>
+      <Carousel className="w-full max-w-7xl mx-auto" opts={{ align: "start", loop: true }}>
+        <CarouselContent className="-ml-2 md:-ml-4">
           {carouselImages.map((image, index) => (
-            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
-              <div className="p-2">
-                <div className="bg-card rounded-lg overflow-hidden shadow-card border border-border hover-scale">
+            <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
+              <div className="group cursor-pointer">
+                <div className="bg-card rounded-xl overflow-hidden shadow-card border border-border hover:shadow-glow hover:border-gold/30 transition-all duration-300 hover:scale-105">
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-48 md:h-56 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
+                  <div className="p-3 bg-gradient-to-t from-background/90 to-transparent">
+                    <p className="text-xs text-muted-foreground text-center line-clamp-2">
+                      {image.alt}
+                    </p>
+                  </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        <CarouselPrevious className="left-2 md:left-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background" />
+        <CarouselNext className="right-2 md:right-4 bg-background/80 backdrop-blur-sm border-border hover:bg-background" />
       </Carousel>
     </div>
   );
