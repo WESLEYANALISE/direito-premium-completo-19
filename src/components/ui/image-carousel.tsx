@@ -1,21 +1,21 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useInView } from "@/hooks/use-in-view";
-import appScreen1 from "@/assets/app-screen-1.png";
-import appScreen2 from "@/assets/app-screen-2.png";
-import appScreen3 from "@/assets/app-screen-3.png";
-import appScreen4 from "@/assets/app-screen-4.png";
-import appScreen5 from "@/assets/app-screen-5.png";
-import appScreen6 from "@/assets/app-screen-6.png";
-import appScreen7 from "@/assets/app-screen-7.png";
+import appScreen111 from "@/assets/app-screen-111.png";
+import appScreen112 from "@/assets/app-screen-112.png";
+import appScreen113 from "@/assets/app-screen-113.png";
+import appScreen114 from "@/assets/app-screen-114.png";
+import appScreen115 from "@/assets/app-screen-115.png";
+import appScreen117 from "@/assets/app-screen-117.png";
+import appScreen118 from "@/assets/app-screen-118.png";
 
 const carouselImages = [
-  { src: appScreen1, alt: "Interface principal do app jurídico" },
-  { src: appScreen2, alt: "Tela de questões e exercícios" },
-  { src: appScreen3, alt: "Dashboard de estudos e progresso" },
-  { src: appScreen4, alt: "Biblioteca digital de conteúdos" },
-  { src: appScreen5, alt: "Sistema de simulados e provas" },
-  { src: appScreen6, alt: "Área de certificações e conquistas" },
-  { src: appScreen7, alt: "Funcionalidades avançadas do app" },
+  { src: appScreen111, alt: "Tela inicial do app Direito Premium" },
+  { src: appScreen112, alt: "Interface de estudos e questões" },
+  { src: appScreen113, alt: "Dashboard de progresso do usuário" },
+  { src: appScreen114, alt: "Biblioteca de conteúdos jurídicos" },
+  { src: appScreen115, alt: "Sistema de simulados e provas" },
+  { src: appScreen117, alt: "Área de certificações e conquistas" },
+  { src: appScreen118, alt: "Funcionalidades premium do aplicativo" },
 ];
 
 export const ImageCarousel = () => {
